@@ -2,7 +2,7 @@
 
 namespace QuickBuy.Dominio.Entidades
 {
-    public class Usuario
+    public class Usuario : Entidade
     {
         public int Id { get; set; }
         public string Email { get; set; }
@@ -14,5 +14,13 @@ namespace QuickBuy.Dominio.Entidades
         //Um usuário pode ter nenhum ou muitos pedidos
         public ICollection<Pedido> Pedidos { get; set; }
 
+        public override void Validade()
+        {
+            if (string.IsNullOrEmpty(Email))
+                AdicionarCritica("Email não foi informado");
+
+            if (string.IsNullOrEmpty(Senha))
+                AdicionarCritica("Senha não foi informado");
+        }
     }
 }

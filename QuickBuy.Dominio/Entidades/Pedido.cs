@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickBuy.Dominio.ObjetoDeValor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,7 +27,7 @@ namespace QuickBuy.Dominio.Entidades
 
         public int FormaPagamentoId { get; set; }
 
-        public ObjetoDeValor.FormaPagamento FormaPagamento {get; set;}
+        public FormaPagamento FormaPagamento {get; set;}
 
         //Pedido deve ter pelo menos um pedido
         //ou muitos itens de pedidos

@@ -15,8 +15,8 @@ namespace QuickBuy.Web
         public Startup(IConfiguration configuration)
         {
             var builder = new ConfigurationBuilder();
-            builder.AddJsonFile("");
-            Configuration = configuration;
+            builder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
+            Configuration = builder.Build();
         }        
 
         // This method gets called by the runtime. Use this method to add services to the container.

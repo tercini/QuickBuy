@@ -1,7 +1,7 @@
 {
   "ConnectionStrings": {
     "SqlServerConnection": "",
-    "QuickBuyDB": "server=localhost;uid=root;pwd=admin;database=QuickBuyDB;"
+    "QuickBuyDB": "Server=localhost; Port=3307; Database=QuickBuyDB; Uid=root; Pwd=030693;"
   }
 }
 

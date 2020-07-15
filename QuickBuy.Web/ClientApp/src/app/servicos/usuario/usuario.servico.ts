@@ -9,10 +9,10 @@ import { Usuario } from "../../modelo/usuario";
 
 export class UsuarioServico {
 
-  private baseUrl: string;
+  private baseURL: string;
 
-  constructor(private http: HttpClient, @Inject('BASE URL') baseUrl: string) {
-    this.baseUrl = baseUrl;
+  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    this.baseURL = baseUrl;
   }
 
   public verificarUsuario(usuario: Usuario): Observable<Usuario> {
@@ -24,7 +24,7 @@ export class UsuarioServico {
     }
 
     //this.baseUrl = raiz do site que pode ser exemplo.: http://www.quickbuy.com/
-    return this.http.post<Usuario>(this.baseUrl + "api/usuario", body, { headers });
+    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
 
   }
 

@@ -10,6 +10,7 @@ import { Usuario } from "../../modelo/usuario";
 export class UsuarioServico {
 
   private baseURL: string;
+  private _usuario: Usuario;
 
   constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.baseURL = baseUrl;
@@ -24,7 +25,7 @@ export class UsuarioServico {
     }
 
     //this.baseUrl = raiz do site que pode ser exemplo.: http://www.quickbuy.com/
-    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+    return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
 
   }
 

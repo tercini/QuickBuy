@@ -18,7 +18,7 @@ export class GuardaRotas implements CanActivate {
 
     var autenticado = sessionStorage.getItem("usuario-autenticado");
 
-    if (autenticado == "1") {
+    if (this.usuarioServico.usuario_autenticado()) {
       return true;
     }
 
